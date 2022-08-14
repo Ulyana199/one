@@ -1,8 +1,17 @@
 public class main {
     public static void main(String[] args) {
-        int ticketPrice = 15_000;
-        int bonus = ticketPrice / 20;
+        int initialAccount = 200;
+        int addend = 150;
+        int bonus;
 
-        System.out.println("Бонусные милли:" + bonus);
+        if (addend > 1000) {
+            bonus = addend / 100;
+        } else {
+            bonus = 0;
+        }
+        int finalAccount = initialAccount + addend + bonus;
+        System.out.println("Итоговый счет: " + finalAccount);
+
+        System.out.println("Количество бонусных рублей: " + bonus);
     }
 }
